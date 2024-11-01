@@ -66,28 +66,28 @@ function LoginForm() {
                     {...field.input}
                   />
 
-            <button
-  type="button"
-  onClick={handleVisibility}
-  aria-hidden="true"
-  style={{
-    background: 'none',
-    border: 'none',
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '0 10px ',
-    paddingBottom:'16px' // Add padding
-  }}
->
-  {showPassword ? (
-    <AiOutlineEyeInvisible style={{ fontSize: '24px' }} /> // Add inline styles
-  ) : (
-    <AiOutlineEye style={{ fontSize: '24px' }} /> // Add inline styles
-  )}
-</button>
-       </div>
+                  <button
+                    type="button"
+                    onClick={handleVisibility}
+                    aria-hidden="true"
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      padding: '0 10px ',
+                      paddingBottom: '16px' // Add padding
+                    }}
+                  >
+                    {showPassword ? (
+                      <AiOutlineEyeInvisible style={{ fontSize: '24px' }} /> // Add inline styles
+                    ) : (
+                      <AiOutlineEye style={{ fontSize: '24px' }} /> // Add inline styles
+                    )}
+                  </button>
+                </div>
                 {field.meta.touched && field.meta.error && (
                   <span className="form-error" aria-live="polite">
                     {field.meta.error}
