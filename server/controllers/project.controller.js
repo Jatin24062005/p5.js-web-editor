@@ -80,7 +80,7 @@ export async function updateProject(req, res) {
   }
 }
 
-export async function getProject(req, res) {
+export async function (req, res) {
   const { project_id: projectId, username } = req.params;
   const user = await User.findByUsername(username);
   if (!user) {
